@@ -26,6 +26,8 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+
+
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -41,42 +43,45 @@
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">
-          Travel<br>
-          <span class="subtitle">Online Agency</span>
+          <span data-i18n="header.brand.title"></span><br>
+          <span class="subtitle" data-i18n="header.brand.subtitle"></span>
         </h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Inicio</a></li>
-          <li><a href="#about">Acerca de</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#portfolio">Galería</a></li>
-          <li><a href="#contact">Contacto</a></li>
+          <li><a href="#hero" data-i18n="header.nav.home"></a></li>
+          <li><a href="#about" data-i18n="header.nav.about"></a></li>
+          <li><a href="#services" data-i18n="header.nav.services"></a></li>
+          <li><a href="#portfolio" data-i18n="header.nav.gallery"></a></li>
+          <li><a href="#contact" data-i18n="header.nav.contact"></a></li>
+
           <li class="dropdown">
             <a href="#">
               <i class="bi bi-translate me-1"></i>
-              <span>Español 🇦🇷</span>
+              <span id="current-lang">Español 🇦🇷</span>
               <i class="bi bi-chevron-down toggle-dropdown"></i>
             </a>
             <ul>
-              <li><a href="#">🇺🇸 Inglés</a></li>
-              <li><a href="#">🇧🇷 Portugués</a></li>
+              <li><a href="#" class="lang-btn" data-lang="en">🇺🇸 English</a></li>
+              <li><a href="#" class="lang-btn" data-lang="pt">🇧🇷 Português</a></li>
+              <li><a href="#" class="lang-btn" data-lang="es">🇦🇷 Español</a></li>
             </ul>
           </li>
-
-
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
       <a class="cta-btn"
         href="https://wa.me/5493757572141?text=Hola%2C%20quiero%20realizar%20una%20consulta%20sobre%20un%20traslado.%20%C2%BFPodrias%20brindarme%20mas%20informacion%3F"
-        target="_blank">
+        target="_blank" data-i18n="header.cta">
         Consultar
       </a>
 
 
+
     </div>
+
   </header>
 
   <main class="main">
@@ -89,345 +94,224 @@
       </video>
 
       <div class="container d-flex flex-column align-items-center text-center hero-content">
-        <h2>Traslados Profesionales en Puerto Iguazú</h2>
-        <p>Traslados al aeropuerto, hoteles, cataratas y tours personalizados</p>
+        <h2 data-i18n="hero.title">Traslados Profesionales en Puerto Iguazú</h2>
+        <p data-i18n="hero.subtitle"></p>
+
       </div>
 
     </section>
 
-    <!-- About Section -->
+
     <section id="about" class="about section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Sobre Mí</h2>
-        <p>Traslados seguros, responsables y personalizados en Puerto Iguazú</p>
-      </div><!-- End Section Title -->
-
       <div class="container">
+        <div class="row gy-4 align-items-center">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <p>
-              Mi nombre es <strong>Matías Bogado</strong>, remisero profesional con años de experiencia brindando
-              traslados
-              confiables en Puerto Iguazú y alrededores. Mi objetivo es que cada pasajero viaje cómodo, seguro y con una
-              atención respetuosa y cercana.
-            </p>
-            <ul>
-              <li><i class="bi bi-check2-circle"></i> <span>Traslados a aeropuerto, hoteles, Cataratas e Iguazú
-                  Falls.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Servicio puntual, vehículo limpio y en excelentes
-                  condiciones.</span></li>
-              <li><i class="bi bi-check2-circle"></i> <span>Asesoramiento turístico durante el traslado.</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-            <div class="visual-section">
-              <!-- Imagen principal con tarjeta superpuesta -->
-              <div class="main-image-container">
-                <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" alt="Traslado profesional" class="img-fluid main-visual">
+          <!-- Columna de imágenes (izquierda) -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="images-grid">
+              <div class="main-image-wrapper">
+                <img src="assets/img/pasajeros/pasajero1.jpg" alt="Experiencia guiada" class="main-image">
+                <div class="experience-badge">
+                  <div class="badge-number">5+</div>
+                  <div class="badge-text" data-i18n="about.experience.years">AÑOS DE EXPERIENCIA</div>
+                </div>
               </div>
-              <!-- Imágenes secundarias -->
-              <div class="secondary-images mt-3">
-                <div class="row g-3">
-                  <div class="col-6">
-                    <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" alt="Traslado aeropuerto"
-                      class="img-fluid secondary-img">
-                  </div>
-                  <div class="col-6">
-                    <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" alt="Destino Cataratas"
-                      class="img-fluid secondary-img">
-                  </div>
+              <div class="secondary-images-wrapper">
+                <img src="assets/img/pasajeros/pasajero2.jpg" alt="Pasajeros satisfechos" class="secondary-image">
+                <img src="assets/img/pasajeros/pasajero3.jpg" alt="Experiencias memorables" class="secondary-image">
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna de contenido (derecha) -->
+          <div class="col-lg-6 content" data-aos="fade-left" data-aos-delay="200">
+
+            <div class="section-badge" data-i18n="about.badge">SOBRE MÍ</div>
+
+            <h2 class="section-main-title" data-i18n="about.mainTitle">
+              Más que un traslado, una experiencia guiada en Puerto Iguazú
+            </h2>
+
+            <p class="section-description" data-i18n="about.description">
+              Mi nombre es <strong>Matías Bogado</strong>, y no soy solo un remisero: soy tu acompañante durante el
+              viaje.
+              Con años de experiencia en Puerto Iguazú, conozco cada rincón de esta maravillosa región y me apasiona
+              compartir sus historias, secretos y mejores lugares mientras te llevo a tu destino.
+            </p>
+
+            <!-- Features list -->
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="bi bi-map"></i>
+                </div>
+                <div class="feature-content">
+                  <h4 data-i18n="about.feature1.title">Guía Turística Personalizada</h4>
+                  <p data-i18n="about.feature1.text">Conoce los mejores lugares y secretos de Iguazú durante todo el
+                    recorrido.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="bi bi-people"></i>
+                </div>
+                <div class="feature-content">
+                  <h4 data-i18n="about.feature2.title">Experiencia Local Auténtica</h4>
+                  <p data-i18n="about.feature2.text">Recomendaciones de restaurantes, miradores y actividades que solo
+                    un local conoce.</p>
                 </div>
               </div>
             </div>
+
+            <!-- CTA opcional -->
+            <div class="contact-info mt-4">
+              <p class="contact-label" data-i18n="about.cta.question">¿Listo para vivir una experiencia única?</p>
+              <a href="https://wa.me/5493757000000" class="btn-whatsapp" data-i18n="about.cta.button">
+                <i class="bi bi-whatsapp"></i> Contactar por WhatsApp
+              </a>
+            </div>
+
           </div>
+
         </div>
       </div>
-    </section><!-- /About Section -->
+
+    </section>
 
 
-    <!-- Services Section -->
+
     <section id="services" class="services section">
 
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+        <h2 data-i18n="services.title">Servicios</h2>
+        <p data-i18n="services.subtitle">Traslados profesionales adaptados a tus necesidades en Puerto Iguazú</p>
+      </div>
 
       <div class="container">
-
         <div class="row gy-4">
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="bi bi-activity"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Nesciunt Mete</h3>
-              </a>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis
-                tempore et consequatur.</p>
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-airplane"></i></div>
+              <h3 data-i18n="services.item1.title">Traslados al Aeropuerto</h3>
+              <p data-i18n="services.item1.text">
+                Servicio puntual y confiable desde y hacia el Aeropuerto Internacional de Iguazú. Te esperamos con un
+                cartel identificatorio para tu mayor comodidad.
+              </p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-broadcast"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Eosle Commodi</h3>
-              </a>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
-                nesciunt dolorem.</p>
+              <div class="icon"><i class="bi bi-building"></i></div>
+              <h3 data-i18n="services.item2.title">Traslados a Hoteles</h3>
+              <p data-i18n="services.item2.text">
+                Llevamos y recogemos pasajeros de todos los hoteles de Puerto Iguazú, con servicio puerta a puerta y
+                atención personalizada.
+              </p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-easel"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Ledo Markt</h3>
-              </a>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci
-                eos earum corrupti.</p>
+              <div class="icon"><i class="bi bi-water"></i></div>
+              <h3 data-i18n="services.item3.title">Tours a Cataratas</h3>
+              <p data-i18n="services.item3.text">
+                Traslado al Parque Nacional Iguazú (lado argentino y brasileño) con guía turística incluida y
+                recomendaciones para aprovechar al máximo tu visita.
+              </p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bounding-box-circles"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Asperiores Commodit</h3>
-              </a>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident
-                adipisci neque.</p>
-              <a href="#" class="stretched-link"></a>
+              <div class="icon"><i class="bi bi-globe-americas"></i></div>
+              <h3 data-i18n="services.item4.title">Circuitos Turísticos</h3>
+              <p data-i18n="services.item4.text">
+                Recorridos completos por los principales atractivos: Hito Tres Fronteras, Güirá Oga, Aripuca, y más.
+                Incluye explicación histórica y cultural.
+              </p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Velit Doloremque</h3>
-              </a>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem
-                alias eius labore.</p>
-              <a href="#" class="stretched-link"></a>
+              <div class="icon"><i class="bi bi-clock-history"></i></div>
+              <h3 data-i18n="services.item5.title">Servicio por Horas</h3>
+              <p data-i18n="services.item5.text">
+                Contratá el servicio por la cantidad de horas que necesites. Ideal para recorridos personalizados,
+                compras o múltiples destinos en un día.
+              </p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-chat-square-text"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Dolori Architecto</h3>
-              </a>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti
-                recusandae ducimus enim.</p>
-              <a href="#" class="stretched-link"></a>
+              <div class="icon"><i class="bi bi-moon-stars"></i></div>
+              <h3 data-i18n="services.item6.title">Traslados Nocturnos</h3>
+              <p data-i18n="services.item6.text">
+                Disponibilidad 24/7 para traslados nocturnos o de madrugada. Seguridad y puntualidad garantizada sin
+                importar la hora.
+              </p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
         </div>
-
       </div>
 
-    </section><!-- /Services Section -->
+    </section>
 
-    <!-- Call To Action Section -->
+
     <section id="call-to-action" class="call-to-action section dark-background">
 
-      <img src="assets/img/cta-bg.jpg" alt="">
+      <img src="assets/img/triple-frontier-psx-20191216-152954-large_standard.webp" alt="Imagen Iguazú">
 
       <div class="container">
-
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-xl-9 text-center text-xl-start">
-            <h3>Call To Action</h3>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.</p>
+            <h3 data-i18n="cta.title">Explorá Iguazú y alrededores con Comodidad</h3>
+            <p data-i18n="cta.subtitle">Traslados confiables hacia Cataratas y principales destinos.</p>
           </div>
           <div class="col-xl-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            <a class="cta-btn align-middle" href="#" data-i18n="cta.button">Reservar Ahora</a>
           </div>
         </div>
-
       </div>
 
-    </section><!-- /Call To Action Section -->
+    </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features section">
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="contact.title">Testimonios</h2>
+        <p data-i18n="contact.subtitle">Compartí tu experiencia. Tu testimonio se mostrará públicamente.</p>
+      </div>
 
       <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="features-image col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100"><img
-              src="assets/img/features-bg.jpg" alt=""></div>
-
-          <div class="col-lg-6 order-lg-1">
-
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-archive flex-shrink-0"></i>
-              <div>
-                <h4>Est labore ad</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-            </div><!-- End Features Item-->
-
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-basket flex-shrink-0"></i>
-              <div>
-                <h4>Harum esse qui</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-              </div>
-            </div><!-- End Features Item-->
-
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-broadcast flex-shrink-0"></i>
-              <div>
-                <h4>Aut occaecati</h4>
-                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-              </div>
-            </div><!-- End Features Item-->
-
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-camera-reels flex-shrink-0"></i>
-              <div>
-                <h4>Beatae veritatis</h4>
-                <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-              </div>
-            </div><!-- End Features Item-->
-
+        <div class="row gy-4" id="testimoniosList">
+          <!-- Aquí Firebase cargará las cards -->
+          <div class="col-12 text-center" id="loadingMessage">
+            <p style="color:#777;" data-i18n="contact.loading">Cargando testimonios...</p>
           </div>
-
         </div>
-
       </div>
 
-    </section><!-- /Features Section -->
+    </section>
 
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row g-0 clients-wrap">
 
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section dark-background">
-
-      <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="subheading">
-          <h3>What we have achieved so far</h3>
-          <p>Iusto et labore modi qui sapiente xpedita tempora et aut non ipsum consequatur illo.</p>
-        </div>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Clients</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Projects</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Workers</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2 data-i18n="portfolio.title">Destinos Populares</h2>
+        <p data-i18n="portfolio.subtitle">Conoce nuestros destinos populares</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -435,127 +319,211 @@
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
+            <li data-filter="*" class="filter-active" data-i18n="portfolio.filter.all">Todos</li>
+            <li data-filter=".filter-app" data-i18n="portfolio.filter.misiones">Misiones</li>
+            <li data-filter=".filter-product" data-i18n="portfolio.filter.foz">Foz do Iguaçu</li>
+            <li data-filter=".filter-branding" data-i18n="portfolio.filter.cde">Ciudad Del Este</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
+            <!-- Misiones -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/galeria/Cataratas-del-Iguazú.webp" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1"
+                <h4 data-i18n="portfolio.item1.title">Cataratas del Iguazú</h4>
+                <p data-i18n="portfolio.item1.text">Una de las 7 maravillas del mundo.</p>
+                <a href="assets/img/galeria/Cataratas-del-Iguazú.webp" title="Cataratas del Iguazú"
                   data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
+              <img src="assets/img/galeria/Guiraoga.webp" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
+                <h4 data-i18n="portfolio.item2.title">Guiraoga</h4>
+                <p data-i18n="portfolio.item2.text">Centro de rescate de fauna misionera.</p>
+                <a href="assets/img/galeria/Guiraoga.webp" title="Guiraoga" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
+              <img src="assets/img/galeria/la-aripuca.webp" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
+                <h4 data-i18n="portfolio.item3.title">La Aripuca</h4>
+                <p data-i18n="portfolio.item3.text">Escultura gigante hecha con arboles recuperados</p>
+                <a href="assets/img/galeria/la-aripuca.webp" title="La Aripuca" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/galeria/duty-free-shop-puerto.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item4.title">Duty Free Shop Puerto Iguazú</h4>
+                <p data-i18n="portfolio.item4.text">Un lugar para disfrutar de compras libres de impuestos.</p>
+                <a href="assets/img/galeria/duty-free-shop-puerto.webp" title="Duty Free Shop Puerto Iguazú"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/galeria/triple-frontier-psx-20191216-152954-large_standard.webp" class="img-fluid"
+                alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item5.title">Hito Tres Fronteras</h4>
+                <p data-i18n="portfolio.item5.text">Punto donde se unen Argentina, Brasil y Paraguay.</p>
+                <a href="assets/img/galeria/triple-frontier-psx-20191216-152954-large_standard.webp"
+                  title="Hito Tres Fronteras" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/galeria/CRUZ.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item6.title">Cruz de Santa Ana</h4>
+                <p data-i18n="portfolio.item6.text">Impresionante mirador con vistas panorámicas.</p>
+                <a href="assets/img/galeria/CRUZ.webp" title="Cruz de Santa Ana" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/galeria/ice-bar-iguazu.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item7.title">Ice Bar Iguazú</h4>
+                <p data-i18n="portfolio.item7.text">Bar hecho completamente de hielo.</p>
+                <a href="assets/img/galeria/ice-bar-iguazu.webp" title="Ice Bar Iguazú"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/galeria/FlyPark.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item8.title">Fly Park</h4>
+                <p data-i18n="portfolio.item8.text">Parque de aventuras y desafíos en plena naturaleza misionera.</p>
+                <a href="assets/img/galeria/FlyPark.webp" title="Fly Park" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/galeria/minas-wanda.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item9.title">Minas de Wanda</h4>
+                <p data-i18n="portfolio.item9.text">Minas de piedras preciosas donde podés verlo en su entorno natural.
+                </p>
+                <a href="assets/img/galeria/minas-wanda.webp" title="Minas de Wanda"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/galeria/puerta-templo.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item10.title">Ruinas de San Ignacio</h4>
+                <p data-i18n="portfolio.item10.text">Vestigios de la misión jesuítica con proyecciones nocturnas.</p>
+                <a href="assets/img/galeria/puerta-templo.webp" title="Ruinas de San Ignacio"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/galeria/73-1_saltos-mocona-barco-2.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item11.title">Saltos Mocona</h4>
+                <p data-i18n="portfolio.item11.text">Saltos de agua impresionantes en la selva misionera.</p>
+                <a href="assets/img/galeria/73-1_saltos-mocona-barco-2.webp" title="Saltos Mocona"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/galeria/los-saltos-del-tabay.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item12.title">Los Saltos del Tabay</h4>
+                <p data-i18n="portfolio.item12.text">Un espectáculo natural de saltos de agua en la selva misionera.</p>
+                <a href="assets/img/galeria/los-saltos-del-tabay.webp" title="Los Saltos del Tabay"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <!-- Foz do Iguaçu -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/galeria/Parque-Das-Aves.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item13.title">Parque Das Aves</h4>
+                <p data-i18n="portfolio.item13.text">Un refugio de aves exóticas en un entorno natural.</p>
+                <a href="assets/img/galeria/Parque-Das-Aves.webp" title="Parque Das Aves"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
+              <img src="assets/img/galeria/represa-itaipu.webp" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
+                <h4 data-i18n="portfolio.item14.title">Represa de Itaipú</h4>
+                <p data-i18n="portfolio.item14.text">Una de las mayores represas del mundo, ubicada en la frontera entre
+                  Paraguay y Brasil.</p>
+                <a href="assets/img/galeria/represa-itaipu.webp" title="Represa de Itaipú"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/galeria/templo-budista.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item15.title">Templo Budista</h4>
+                <p data-i18n="portfolio.item15.text">Templo con estatuas doradas un sitio de paz y meditación.</p>
+                <a href="assets/img/galeria/templo-budista.webp" title="Templo Budista"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/galeria/museo-dinosaurio.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item16.title">Museo de Dinosaurios</h4>
+                <p data-i18n="portfolio.item16.text">Un viaje al pasado con impresionantes fósiles y réplicas.</p>
+                <a href="assets/img/galeria/museo-dinosaurio.webp" title="Museo de Dinosaurios"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <!-- Ciudad del Este -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/galeria/Cuidad-del-este.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item17.title">Ciudad del Este</h4>
+                <p data-i18n="portfolio.item17.text">Un importante centro comercial y de compras en la triple frontera.
+                </p>
+                <a href="assets/img/galeria/Cuidad-del-este.webp" title="Ciudad del Este"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
+              <img src="assets/img/galeria/lago-Acaray.webp" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
+                <h4 data-i18n="portfolio.item18.title">Lago Acaray</h4>
+                <p data-i18n="portfolio.item18.text">Un hermoso lago ideal para la pesca y deportes acuáticos.</p>
+                <a href="assets/img/galeria/lago-Acaray.webp" title="Lago Acaray" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/galeria/saltos-del-monday.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 data-i18n="portfolio.item19.title">Saltos del Monday</h4>
+                <p data-i18n="portfolio.item19.text">Impresionantes cascadas en la frontera entre Paraguay y Brasil.</p>
+                <a href="assets/img/galeria/saltos-del-monday.jpg" title="Saltos del Monday"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
 
           </div><!-- End Portfolio Container -->
 
@@ -565,345 +533,167 @@
 
     </section><!-- /Portfolio Section -->
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section light-background">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="pricing-item recommended">
-              <span class="recommended-badge">Recommended</span>
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="pricing-item">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Pricing Section -->
-
-    <!-- Faq Section -->
-    <section id="faq" class="faq section">
-
-      <div class="container-fluid">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
-
-            <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-              <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
-            </div>
-
-            <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="faq-item faq-active">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-                    gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet
-                    id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
-                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
-                    elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque
-                    eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis
-                    sed odio morbi quis</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-5 order-1 order-lg-2">
-            <img src="assets/img/faq.jpg" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Faq Section -->
-
-    <!-- Recent Posts Section -->
-    <section id="recent-posts" class="recent-posts section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Recent Blog Posts</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Politics</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Maria Doe</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Sports</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Allisa Mayer</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 5, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Entertainment</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-        </div><!-- End recent posts list -->
-
-      </div>
-
-    </section><!-- /Recent Posts Section -->
 
     <!-- Contact Section -->
+
     <section id="contact" class="contact section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+        <h2 data-i18n="contact.title">Testimonios</h2>
+        <p data-i18n="contact.subtitle">Compartí tu experiencia. Tu testimonio se mostrará públicamente.</p>
+      </div>
 
       <div class="container" data-aos="fade" data-aos-delay="100">
-
         <div class="row gy-4">
 
-          <div class="col-lg-4">
+          <!-- IZQUIERDA: INFORMACIÓN + REDES -->
+          <div class="col-lg-6">
+
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
-                <h3>Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <h3 data-i18n="contact.address.title">Dirección</h3>
+                <p data-i18n="contact.address.text">Puerto Iguazú, Misiones, Argentina</p>
               </div>
-            </div><!-- End Info Item -->
+            </div>
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
-                <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <h3 data-i18n="contact.whatsapp.title">WhatsApp</h3>
+                <p>+54 9 3757 57-2141</p>
               </div>
-            </div><!-- End Info Item -->
+            </div>
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
-                <h3>Email Us</h3>
-                <p>info@example.com</p>
+                <h3 data-i18n="contact.email.title">Email</h3>
+                <p>travelonlineagency223@gmail.com</p>
               </div>
-            </div><!-- End Info Item -->
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-instagram flex-shrink-0"></i>
+              <div>
+                <h3 data-i18n="contact.instagram.title">Instagram</h3>
+                <p>
+                  <a href="https://www.instagram.com/cataratastravelagency_online?igsh=MmZqdzNiejZ4bXV4&utm_source=qr"
+                    target="_blank">
+                    @cataratastravelagency_online
+                  </a>
+                </p>
+              </div>
+            </div>
 
           </div>
 
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
+          <!-- DERECHA: FORMULARIO -->
+          <div class="col-lg-6">
+            <form id="testimonyForm" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Nombre"
+                    data-i18n-placeholder="contact.form.name" required>
                 </div>
 
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                <div class="col-md-6">
+                  <input type="text" name="country" class="form-control" placeholder="País"
+                    data-i18n-placeholder="contact.form.country" required>
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="email" name="email" class="form-control"
+                    placeholder="Correo electrónico (no se mostrará)" data-i18n-placeholder="contact.form.email"
+                    required>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <textarea class="form-control" name="remarks" rows="5" placeholder="Tu experiencia"
+                    data-i18n-placeholder="contact.form.remarks" required></textarea>
+                </div>
+
+                <!-- Aviso legal de publicación -->
+                <div class="col-md-12">
+                  <label class="d-flex align-items-start">
+                    <input type="checkbox" name="agree" required style="margin-right: 8px; margin-top: 4px;">
+                    <span data-i18n="contact.form.agree">Autorizo que mi testimonio sea publicado en el sitio
+                      web.</span>
+                  </label>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                  <button type="submit" data-i18n="contact.form.submit">Enviar Testimonio</button>
                 </div>
 
               </div>
             </form>
-          </div><!-- End Contact Form -->
+          </div>
 
         </div>
-
       </div>
 
-    </section><!-- /Contact Section -->
+    </section>
+
+
+
 
   </main>
 
   <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">KnightOne</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+
+    <div class="container text-center">
+
+      <!-- LOGO -->
+      <div class="footer-logo mb-4">
+        <img src="assets/img/logo.png" alt="travelonlineagency" style="max-width: 250px;">
       </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">KnightOne</strong> <span>All Rights Reserved</span>
+
+      <!-- DESCRIPCIÓN -->
+      <p class="footer-description" data-i18n="footer.description">
+        Traslados confiables en Puerto Iguazú y alrededores. Puntualidad, seguridad y atención personalizada en cada
+        viaje.
+      </p>
+
+      <!-- REDES / CONTACTO -->
+      <div class="social-links d-flex justify-content-center mt-3">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/5493757572141" target="_blank" class="mx-2">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/cataratastravelagency_online?igsh=MmZqdzNiejZ4bXV4&utm_source=qr"
+          target="_blank" class="mx-2">
+          <i class="bi bi-instagram"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:travelonlineagency223@gmail.com" class="mx-2">
+          <i class="bi bi-envelope"></i>
+        </a>
+
+      </div>
+
+      <!-- COPYRIGHT -->
+      <div class="container mt-4">
+        <div class="copyright" data-i18n="footer.copyright">
+          © Copyright travelonlineagency · Todos los derechos reservados
         </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <div class="credits" data-i18n="footer.credits">
+          Sitio diseñado por <a href="https://mateorojas.com.ar/">Mateo Rojas</a>
         </div>
       </div>
+
     </div>
+
   </footer>
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
@@ -924,7 +714,74 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/i18next@21.6.10/dist/umd/i18next.min.js"></script>
+  <script src="assets/locales/es.js"></script>
+  <script src="assets/locales/en.js"></script>
+  <script src="assets/locales/pt.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script>
+    i18next.t('header.nav.home')
 
+  </script>
 </body>
+
+
+
+
+<script>
+  // Config Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyCP9djpsPKPc9KwkelyR3UTjEIyY3iqsQI",
+    authDomain: "martin-74d3f.firebaseapp.com",
+    projectId: "martin-74d3f",
+    storageBucket: "martin-74d3f.appspot.com",
+    messagingSenderId: "945310311811",
+    appId: "1:945310311811:web:e539e8883355c2dd1742b6",
+    measurementId: "G-9XFPMN21Y4"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  const testimoniosList = document.getElementById("testimoniosList");
+  const loadingMessage = document.getElementById("loadingMessage");
+
+  // Cargar testimonios en tiempo real
+  db.collection("testimonios")
+    .orderBy("timestamp", "desc")
+    .onSnapshot((snapshot) => {
+      testimoniosList.innerHTML = ""; // limpiar
+
+      if (snapshot.empty) {
+        testimoniosList.innerHTML = `
+          <div class="col-12 text-center">
+            <p style="color:#777;">Aún no hay testimonios.</p>
+          </div>`;
+        return;
+      }
+
+      snapshot.forEach((doc, index) => {
+        const t = doc.data();
+
+        const card = `
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="${100 + index * 100}">
+            <div class="testimonial-card">
+              <p class="testimonial-text">“${t.remarks}”</p>
+              <div class="testimonial-user">
+                <div>
+                  <h5>${t.name}</h5>
+                  <span>${t.country}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+
+        testimoniosList.innerHTML += card;
+      });
+    });
+</script>
+
+
 
 </html>
