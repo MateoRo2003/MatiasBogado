@@ -24,6 +24,9 @@ window.esTranslations = {
     "about.feature1.text": "Conoce los mejores lugares y secretos de Iguazú durante todo el recorrido.",
     "about.feature2.title": "Experiencia Local Auténtica",
     "about.feature2.text": "Recomendaciones de restaurantes, miradores y actividades que solo un local conoce.",
+    "about.feature3.title": "Coordinación Multilingüe con Guías",
+    "about.feature3.text": "Coordino con guías profesionales en diferentes idiomas — alemán, francés, italiano, chino y más — para asegurar que los pasajeros extranjeros disfruten de una experiencia completa y comprensible."
+    ,
     "about.cta.question": "¿Listo para vivir una experiencia única?",
     "about.cta.button": "Contactar por WhatsApp",
     "contact.form.agree": "Acepto publicar mi testimonio en el sitio web.",
