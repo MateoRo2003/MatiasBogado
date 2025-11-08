@@ -291,17 +291,101 @@
       </div>
 
       <div class="container">
-        <div class="row gy-4" id="testimoniosList">
-          <!-- Aquí Firebase cargará las cards -->
-          <div class="col-12 text-center" id="loadingMessage">
-            <p style="color:#777;" data-i18n="contact.loading">Cargando testimonios...</p>
+        <!-- Swiper -->
+        <div class="swiper testimonials-swiper">
+          <div class="swiper-wrapper" id="testimoniosList">
+            <!-- Firebase cargará las cards aquí como swiper-slide -->
+            <div class="swiper-slide text-center" id="loadingMessage">
+              <p style="color:#777;" data-i18n="contact.loading">Cargando testimonios...</p>
+            </div>
           </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
 
     </section>
+ <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script>
+  // Config Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyCP9djpsPKPc9KwkelyR3UTjEIyY3iqsQI",
+  authDomain: "martin-74d3f.firebaseapp.com",
+  projectId: "martin-74d3f",
+  storageBucket: "martin-74d3f.appspot.com",
+  messagingSenderId: "945310311811",
+  appId: "1:945310311811:web:e539e8883355c2dd1742b6",
+  measurementId: "G-9XFPMN21Y4"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+const swiperWrapper = document.getElementById("testimoniosList");
+let testimoniosSwiper;
+
+function initSwiper() {
+  if (testimoniosSwiper) testimoniosSwiper.destroy();
+  testimoniosSwiper = new Swiper(".testimonials-swiper", {
+    direction: "horizontal",
+    loop: false,             // NO repetir testimonios
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 5000,           // 5 segundos por grupo de slides
+      disableOnInteraction: false, // sigue autoplay aunque el usuario haga swipe
+    },
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+}
 
 
+// Cargar testimonios desde Firebase
+db.collection("testimonios")
+  .orderBy("timestamp", "desc")
+  .get()
+  .then(snapshot => {
+    swiperWrapper.innerHTML = "";
+
+    if (snapshot.empty) {
+      swiperWrapper.innerHTML = `<div class="swiper-slide text-center"><p style="color:#777;">Aún no hay testimonios.</p></div>`;
+      initSwiper();
+      return;
+    }
+
+    snapshot.forEach(doc => {
+      const t = doc.data();
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide";
+      slide.innerHTML = `
+        <div class="testimonial-card" data-aos="fade-up">
+          <p class="testimonial-text">“${t.remarks}”</p>
+          <div class="testimonial-user">
+            <div>
+              <h5>${t.name}</h5>
+              <span>${t.country}</span>
+            </div>
+          </div>
+        </div>`;
+      swiperWrapper.appendChild(slide);
+    });
+
+    initSwiper();
+  })
+  .catch(error => {
+    console.error(error);
+    swiperWrapper.innerHTML = `<div class="swiper-slide text-center"><p style="color:red;">Error al cargar testimonios.</p></div>`;
+    initSwiper();
+  });
+
+  </script>
 
 
 
@@ -704,13 +788,13 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
@@ -720,63 +804,73 @@
   <script src="assets/locales/pt.js"></script>
   <script src="assets/js/i18n.js"></script>
   <!-- Firebase App (necesario) -->
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+ 
+  <script>
+    const testimonyForm = document.getElementById("testimonyForm");
+
+    testimonyForm.addEventListener("submit", (e) => {
+      e.preventDefault(); // evitar recarga
+
+      // Obtener valores
+      const name = testimonyForm.name.value.trim();
+      const country = testimonyForm.country.value.trim();
+      const email = testimonyForm.email.value.trim();
+      const remarks = testimonyForm.remarks.value.trim();
+      const agree = testimonyForm.agree.checked;
+
+      if (!agree) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Debes autorizar la publicación del testimonio',
+          confirmButtonText: 'Aceptar'
+        });
+        return;
+      }
+
+      // Mostrar mensaje de guardando
+      Swal.fire({
+        title: 'Guardando testimonio...',
+        allowOutsideClick: false,
+        didOpen: () => {
+          Swal.showLoading();
+        }
+      });
+
+      // Guardar en Firestore
+      db.collection("testimonios").add({
+        name,
+        country,
+        email,
+        remarks,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      })
+        .then(() => {
+          Swal.fire({
+            icon: 'success',
+            title: '¡Guardado correctamente!',
+            showConfirmButton: false,
+            timer: 1500
+          }).then(() => {
+            testimonyForm.reset(); // limpiar formulario
+            window.location.hash = '#testimonios'; // redirigir a sección
+          });
+        })
+        .catch((error) => {
+          console.error("Error al enviar testimonio: ", error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Hubo un error al enviar tu testimonio',
+            text: 'Intenta nuevamente más tarde',
+            confirmButtonText: 'Aceptar'
+          });
+        });
+    });
+  </script>
 
   <!-- Firebase Firestore -->
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script>
-    // Config Firebase
-    const firebaseConfig = {
-      apiKey: "AIzaSyCP9djpsPKPc9KwkelyR3UTjEIyY3iqsQI",
-      authDomain: "martin-74d3f.firebaseapp.com",
-      projectId: "martin-74d3f",
-      storageBucket: "martin-74d3f.appspot.com",
-      messagingSenderId: "945310311811",
-      appId: "1:945310311811:web:e539e8883355c2dd1742b6",
-      measurementId: "G-9XFPMN21Y4"
-    };
+  
 
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
 
-    const testimoniosList = document.getElementById("testimoniosList");
-    const loadingMessage = document.getElementById("loadingMessage");
-
-    // Cargar testimonios en tiempo real
-    db.collection("testimonios")
-      .orderBy("timestamp", "desc")
-      .onSnapshot((snapshot) => {
-        testimoniosList.innerHTML = ""; // limpiar
-
-        if (snapshot.empty) {
-          testimoniosList.innerHTML = `
-          <div class="col-12 text-center">
-            <p style="color:#777;">Aún no hay testimonios.</p>
-          </div>`;
-          return;
-        }
-
-        snapshot.forEach((doc, index) => {
-          const t = doc.data();
-
-          const card = `
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="${100 + index * 100}">
-            <div class="testimonial-card">
-              <p class="testimonial-text">“${t.remarks}”</p>
-              <div class="testimonial-user">
-                <div>
-                  <h5>${t.name}</h5>
-                  <span>${t.country}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-
-          testimoniosList.innerHTML += card;
-        });
-      });
-  </script>
 </body>
 
 
