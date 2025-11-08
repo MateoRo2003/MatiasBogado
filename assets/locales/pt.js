@@ -15,7 +15,11 @@ window.ptTranslations = {
     "hero.subtitle": "Traslados para o aeroporto, hotéis, cataratas e passeios personalizados",
     "about.badge": "SOBRE MIM",
     "about.mainTitle": "Mais do que um traslado, uma experiência guiada em Puerto Iguazú",
-    "about.description": "Meu nome é Matías Bogado, e não sou apenas um motorista. Sou seu acompanhante durante toda a viagem. Com anos de experiência em Puerto Iguazú, conheço cada canto desta região incrível e adoro compartilhar suas histórias, segredos e melhores lugares enquanto o levo ao seu destino.",
+    "about.description": "Meu nome é <strong>Matías Bogado</strong>, e sou seu <strong>acompaniante profissional</strong> durante a " +
+              "viagem. " +
+              "Com anos de experiência em Puerto Iguazú e traslados executivos entre províncias, conheço cada canto de " +
+              "esta maravilhosa região " +
+              "e me apaixono por compartilhar suas histórias, segredos e os melhores lugares enquanto o levo ao seu destino.",
     "about.feature1.title": "Guia Turístico Personalizado",
     "about.feature1.text": "Conheça os melhores lugares e segredos de Iguazú durante todo o percurso.",
     "about.feature2.title": "Experiência Local Autêntica",
@@ -37,8 +41,8 @@ window.ptTranslations = {
     "services.item4.text": "Passeios completos pelos principais atrativos: Marco das Três Fronteiras, Güirá Oga, Aripuca e muito mais. Inclui explicação histórica e cultural.",
     "services.item5.title": "Serviço por Horas",
     "services.item5.text": "Contrate o serviço pela quantidade de horas que precisar. Ideal para passeios personalizados, compras ou vários destinos no mesmo dia.",
-    "services.item6.title": "Traslados Noturnos",
-    "services.item6.text": "Disponibilidade 24 horas para traslados noturnos ou de madrugada. Segurança e pontualidade garantidas.",
+    "services.item6.title": "Traslados Ejecutivos 24/7",
+    "services.item6.text": "Servicio profesional de traslados ejecutivos, disponible las 24 horas. Seguridad, puntualidad y comodidad garantizadas para todos tus viajes.",
     "cta.title": "Explore Iguazú e arredores com conforto",
     "cta.subtitle": "Traslados confiáveis para as Cataratas e principais destinos.",
     "cta.button": "Reservar Agora",
@@ -86,6 +90,10 @@ window.ptTranslations = {
     "portfolio.item18.text": "Lago lindo ideal para pesca e esportes aquáticos.",
     "portfolio.item19.title": "Saltos del Monday",
     "portfolio.item19.text": "Quedas d’água impressionantes na fronteira Paraguai Brasil.",
+    "portfolio.item20.title": "Como Visitar Cataratas del Iguazú",
+    "portfolio.item20.text": "Guia completa para visitar as impressionantes cataratas.",
+        "portfolio.item21.title":"  Shopping Catuai",
+    "portfolio.item21.text":" É um dos maiores centros comerciais do Paraná",
     "contact.title": "Depoimentos",
     "contact.subtitle": "Compartilhe sua experiência. Seu depoimento será exibido publicamente.",
     "contact.address.title": "Endereço",

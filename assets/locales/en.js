@@ -15,7 +15,11 @@ window.enTranslations = {
     "hero.subtitle": "Airport, hotel, falls transfers and personalized tours",
     "about.badge": "ABOUT ME",
     "about.mainTitle": "More than a transfer, a guided experience in Puerto Iguazú",
-    "about.description": "My name is Matías Bogado, and I’m not just a driver. I’m your companion throughout the journey. With years of experience in Puerto Iguazú, I know every corner of this wonderful region and I love sharing its stories, secrets and best spots while taking you to your destination.",
+     "about.description": "My name is <strong>Matías Bogado</strong>, and I am your <strong>professional companion</strong> during the " +
+              "trip. " +
+              "With years of experience in Puerto Iguazú and executive transfers between provinces, I know every corner of " +
+              "this wonderful region " +
+              "and I am passionate about sharing its stories, secrets and the best places while I take you to your destination.",
     "about.feature1.title": "Personalized Tour Guide",
     "about.feature1.text": "Discover the best places and hidden gems of Iguazú throughout the entire trip.",
     "about.feature2.title": "Authentic Local Experience",
@@ -36,8 +40,8 @@ window.enTranslations = {
     "services.item4.text": "Complete tours of the main attractions: Three Borders Landmark, Güirá Oga, Aripuca and more. Includes cultural and historical explanation.",
     "services.item5.title": "Hourly Service",
     "services.item5.text": "Hire the service for the number of hours you need. Perfect for personalized routes, shopping or multiple destinations in one day.",
-    "services.item6.title": "Night Transfers",
-    "services.item6.text": "Available 24/7 for night or early morning transfers. Safety and punctuality guaranteed at any hour.",
+    "services.item6.title": "Executive Transfers 24/7",
+    "services.item6.text": "Professional executive transfer service, available 24 hours a day. Safety, punctuality and comfort guaranteed for all your trips.",
     "cta.title": "Explore Iguazú and surroundings with comfort",
     "cta.subtitle": "Reliable transfers to Iguazú Falls and main destinations.",
     "cta.button": "Book Now",
@@ -86,6 +90,10 @@ window.enTranslations = {
     "portfolio.item18.text": "A beautiful lake ideal for fishing and water sports.",
     "portfolio.item19.title": "Monday Falls",
     "portfolio.item19.text": "Impressive waterfalls on the Paraguay Brazil border.",
+    "portfolio.item20.title": "How to Visit Cataratas del Iguazú",
+    "portfolio.item20.text": "Complete guide to visit the impressive falls.",
+        "portfolio.item21.title":"  Shopping Catuai",
+    "portfolio.item21.text":" It is one of the largest shopping centers in Paraná",
     "contact.title": "Testimonials",
     "contact.subtitle": "Share your experience. Your testimonial will be displayed publicly.",
     "contact.address.title": "Address",
