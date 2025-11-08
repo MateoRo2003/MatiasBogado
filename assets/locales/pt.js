@@ -90,7 +90,7 @@ window.ptTranslations = {
     "portfolio.item18.text": "Lago lindo ideal para pesca e esportes aquáticos.",
     "portfolio.item19.title": "Saltos del Monday",
     "portfolio.item19.text": "Quedas d’água impressionantes na fronteira Paraguai Brasil.",
-    "portfolio.item20.title": "Como Visitar Cataratas del Iguazú",
+    "portfolio.item20.title": "Cataratas del iguazú, desde Foz do Iguaçu",
     "portfolio.item20.text": "Guia completa para visitar as impressionantes cataratas.",
         "portfolio.item21.title":"  Shopping Catuai",
     "portfolio.item21.text":" É um dos maiores centros comerciais do Paraná",

@@ -69,6 +69,10 @@
   scroll-behavior: smooth;
 }
 
+.no-resize {
+  resize: none;
+  overflow: auto;
+}
 
 
 .sitename {

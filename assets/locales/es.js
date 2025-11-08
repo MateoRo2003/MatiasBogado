@@ -93,7 +93,7 @@ window.esTranslations = {
     "portfolio.item18.text": "Un hermoso lago ideal para la pesca y deportes acuáticos.",
     "portfolio.item19.title": "Saltos del Monday",
     "portfolio.item19.text": "Impresionantes cascadas en la frontera entre Paraguay y Brasil.",
-    "portfolio.item20.title": "Como Visitar Cataratas del Iguazú",
+    "portfolio.item20.title": "Cataratas del iguazú, desde Foz do Iguaçu",
     "contact.title": "Testimonios",
     "contact.subtitle": "Compartí tu experiencia. Tu testimonio se mostrará públicamente.",
     "contact.address.title": "Dirección",

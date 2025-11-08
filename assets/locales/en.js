@@ -90,7 +90,7 @@ window.enTranslations = {
     "portfolio.item18.text": "A beautiful lake ideal for fishing and water sports.",
     "portfolio.item19.title": "Monday Falls",
     "portfolio.item19.text": "Impressive waterfalls on the Paraguay Brazil border.",
-    "portfolio.item20.title": "How to Visit Cataratas del Iguazú",
+    "portfolio.item20.title": "Cataratas del iguazú, from Foz do Iguaçu",  
     "portfolio.item20.text": "Complete guide to visit the impressive falls.",
         "portfolio.item21.title":"  Shopping Catuai",
     "portfolio.item21.text":" It is one of the largest shopping centers in Paraná",
