@@ -44,6 +44,7 @@ window.enTranslations = {
     "portfolio.title": "Popular Destinations",
     "portfolio.subtitle": "Discover our most popular destinations",
     "portfolio.filter.all": "All",
+    "contact.form.agree": "I agree public my testimonial on the website.",
     "portfolio.filter.misiones": "Misiones",
     "portfolio.filter.foz": "Foz do Iguaçu",
     "portfolio.filter.cde": "Ciudad Del Este",

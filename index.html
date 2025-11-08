@@ -125,7 +125,7 @@
           </div>
 
           <!-- Columna de contenido (derecha) -->
-          <div class="col-lg-6 content" data-aos="fade-left" data-aos-delay="200">
+          <div class="col-lg-6 content px-3 px-sm-4 px-md-5" data-aos="fade-left" data-aos-delay="200">
 
             <div class="section-badge" data-i18n="about.badge">SOBRE MÍ</div>
 
@@ -719,51 +719,47 @@
   <script src="assets/locales/en.js"></script>
   <script src="assets/locales/pt.js"></script>
   <script src="assets/js/i18n.js"></script>
+  <!-- Firebase App (necesario) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+
+  <!-- Firebase Firestore -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script>
-    i18next.t('header.nav.home')
+    // Config Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyCP9djpsPKPc9KwkelyR3UTjEIyY3iqsQI",
+      authDomain: "martin-74d3f.firebaseapp.com",
+      projectId: "martin-74d3f",
+      storageBucket: "martin-74d3f.appspot.com",
+      messagingSenderId: "945310311811",
+      appId: "1:945310311811:web:e539e8883355c2dd1742b6",
+      measurementId: "G-9XFPMN21Y4"
+    };
 
-  </script>
-</body>
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
 
+    const testimoniosList = document.getElementById("testimoniosList");
+    const loadingMessage = document.getElementById("loadingMessage");
 
+    // Cargar testimonios en tiempo real
+    db.collection("testimonios")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        testimoniosList.innerHTML = ""; // limpiar
 
-
-<script>
-  // Config Firebase
-  const firebaseConfig = {
-    apiKey: "AIzaSyCP9djpsPKPc9KwkelyR3UTjEIyY3iqsQI",
-    authDomain: "martin-74d3f.firebaseapp.com",
-    projectId: "martin-74d3f",
-    storageBucket: "martin-74d3f.appspot.com",
-    messagingSenderId: "945310311811",
-    appId: "1:945310311811:web:e539e8883355c2dd1742b6",
-    measurementId: "G-9XFPMN21Y4"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
-
-  const testimoniosList = document.getElementById("testimoniosList");
-  const loadingMessage = document.getElementById("loadingMessage");
-
-  // Cargar testimonios en tiempo real
-  db.collection("testimonios")
-    .orderBy("timestamp", "desc")
-    .onSnapshot((snapshot) => {
-      testimoniosList.innerHTML = ""; // limpiar
-
-      if (snapshot.empty) {
-        testimoniosList.innerHTML = `
+        if (snapshot.empty) {
+          testimoniosList.innerHTML = `
           <div class="col-12 text-center">
             <p style="color:#777;">Aún no hay testimonios.</p>
           </div>`;
-        return;
-      }
+          return;
+        }
 
-      snapshot.forEach((doc, index) => {
-        const t = doc.data();
+        snapshot.forEach((doc, index) => {
+          const t = doc.data();
 
-        const card = `
+          const card = `
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="${100 + index * 100}">
             <div class="testimonial-card">
               <p class="testimonial-text">“${t.remarks}”</p>
@@ -777,10 +773,16 @@
           </div>
         `;
 
-        testimoniosList.innerHTML += card;
+          testimoniosList.innerHTML += card;
+        });
       });
-    });
-</script>
+  </script>
+</body>
+
+
+
+
+
 
 
 

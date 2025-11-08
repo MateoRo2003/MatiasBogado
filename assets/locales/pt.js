@@ -24,6 +24,7 @@ window.ptTranslations = {
     "about.cta.button": "Contactar pelo WhatsApp",
     "about.experience.years": "ANOS DE EXPERIÊNCIA",
     "services.title": "Serviços",
+     "contact.form.agree": "Eu autorizo que meu depoimento seja publicado no site.",
     "contact.loading": "Carregando depoimentos...",
     "services.subtitle": "Traslados profissionais adaptados às suas necessidades em Puerto Iguazú",
     "services.item1.title": "Traslados ao Aeroporto",

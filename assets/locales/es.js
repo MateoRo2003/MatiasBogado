@@ -22,6 +22,7 @@ window.esTranslations = {
     "about.feature2.text": "Recomendaciones de restaurantes, miradores y actividades que solo un local conoce.",
     "about.cta.question": "¿Listo para vivir una experiencia única?",
     "about.cta.button": "Contactar por WhatsApp",
+     "contact.form.agree": "Acepto publicar mi testimonio en el sitio web.",
     "about.experience.years": "AÑOS DE EXPERIENCIA",
     "services.title": "Servicios",
     "contact.loading": "Cargando testimonios...",
