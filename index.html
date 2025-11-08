@@ -275,7 +275,7 @@
             <p data-i18n="cta.subtitle">Traslados confiables hacia Cataratas y principales destinos.</p>
           </div>
           <div class="col-xl-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#" data-i18n="cta.button">Reservar Ahora</a>
+            <a class="cta-btn align-middle" href="https://wa.me/5493757572141?text=Hola%2C%20quiero%20realizar%20una%20consulta%20sobre%20un%20traslado.%20%C2%BFPodrias%20brindarme%20mas%20informacion%3F" data-i18n="cta.button">Reservar Ahora</a>
           </div>
         </div>
       </div>
@@ -305,66 +305,66 @@
       </div>
 
     </section>
- <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script>
-  // Config Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyCP9djpsPKPc9KwkelyR3UTjEIyY3iqsQI",
-  authDomain: "martin-74d3f.firebaseapp.com",
-  projectId: "martin-74d3f",
-  storageBucket: "martin-74d3f.appspot.com",
-  messagingSenderId: "945310311811",
-  appId: "1:945310311811:web:e539e8883355c2dd1742b6",
-  measurementId: "G-9XFPMN21Y4"
-};
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script>
+      // Config Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyCP9djpsPKPc9KwkelyR3UTjEIyY3iqsQI",
+        authDomain: "martin-74d3f.firebaseapp.com",
+        projectId: "martin-74d3f",
+        storageBucket: "martin-74d3f.appspot.com",
+        messagingSenderId: "945310311811",
+        appId: "1:945310311811:web:e539e8883355c2dd1742b6",
+        measurementId: "G-9XFPMN21Y4"
+      };
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
 
-const swiperWrapper = document.getElementById("testimoniosList");
-let testimoniosSwiper;
+      const swiperWrapper = document.getElementById("testimoniosList");
+      let testimoniosSwiper;
 
-function initSwiper() {
-  if (testimoniosSwiper) testimoniosSwiper.destroy();
-  testimoniosSwiper = new Swiper(".testimonials-swiper", {
-    direction: "horizontal",
-    loop: false,             // NO repetir testimonios
-    slidesPerView: 1,
-    spaceBetween: 30,
-    autoplay: {
-      delay: 5000,           // 5 segundos por grupo de slides
-      disableOnInteraction: false, // sigue autoplay aunque el usuario haga swipe
-    },
-    pagination: { el: ".swiper-pagination", clickable: true },
-    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    breakpoints: {
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 }
-    }
-  });
-}
+      function initSwiper() {
+        if (testimoniosSwiper) testimoniosSwiper.destroy();
+        testimoniosSwiper = new Swiper(".testimonials-swiper", {
+          direction: "horizontal",
+          loop: false,             // NO repetir testimonios
+          slidesPerView: 1,
+          spaceBetween: 30,
+          autoplay: {
+            delay: 5000,           // 5 segundos por grupo de slides
+            disableOnInteraction: false, // sigue autoplay aunque el usuario haga swipe
+          },
+          pagination: { el: ".swiper-pagination", clickable: true },
+          navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+          breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+          }
+        });
+      }
 
 
-// Cargar testimonios desde Firebase
-db.collection("testimonios")
-  .orderBy("timestamp", "desc")
-  .get()
-  .then(snapshot => {
-    swiperWrapper.innerHTML = "";
+      // Cargar testimonios desde Firebase
+      db.collection("testimonios")
+        .orderBy("timestamp", "desc")
+        .get()
+        .then(snapshot => {
+          swiperWrapper.innerHTML = "";
 
-    if (snapshot.empty) {
-      swiperWrapper.innerHTML = `<div class="swiper-slide text-center"><p style="color:#777;">Aún no hay testimonios.</p></div>`;
-      initSwiper();
-      return;
-    }
+          if (snapshot.empty) {
+            swiperWrapper.innerHTML = `<div class="swiper-slide text-center"><p style="color:#777;">Aún no hay testimonios.</p></div>`;
+            initSwiper();
+            return;
+          }
 
-    snapshot.forEach(doc => {
-      const t = doc.data();
-      const slide = document.createElement("div");
-      slide.className = "swiper-slide";
-      slide.innerHTML = `
+          snapshot.forEach(doc => {
+            const t = doc.data();
+            const slide = document.createElement("div");
+            slide.className = "swiper-slide";
+            slide.innerHTML = `
         <div class="testimonial-card" data-aos="fade-up">
           <p class="testimonial-text">“${t.remarks}”</p>
           <div class="testimonial-user">
@@ -374,18 +374,18 @@ db.collection("testimonios")
             </div>
           </div>
         </div>`;
-      swiperWrapper.appendChild(slide);
-    });
+            swiperWrapper.appendChild(slide);
+          });
 
-    initSwiper();
-  })
-  .catch(error => {
-    console.error(error);
-    swiperWrapper.innerHTML = `<div class="swiper-slide text-center"><p style="color:red;">Error al cargar testimonios.</p></div>`;
-    initSwiper();
-  });
+          initSwiper();
+        })
+        .catch(error => {
+          console.error(error);
+          swiperWrapper.innerHTML = `<div class="swiper-slide text-center"><p style="color:red;">Error al cargar testimonios.</p></div>`;
+          initSwiper();
+        });
 
-  </script>
+    </script>
 
 
 
@@ -804,12 +804,12 @@ db.collection("testimonios")
   <script src="assets/locales/pt.js"></script>
   <script src="assets/js/i18n.js"></script>
   <!-- Firebase App (necesario) -->
- 
+
   <script>
     const testimonyForm = document.getElementById("testimonyForm");
 
     testimonyForm.addEventListener("submit", (e) => {
-      e.preventDefault(); // evitar recarga
+      e.preventDefault(); // evitar recarga automática inicial
 
       // Obtener valores
       const name = testimonyForm.name.value.trim();
@@ -852,7 +852,8 @@ db.collection("testimonios")
             timer: 1500
           }).then(() => {
             testimonyForm.reset(); // limpiar formulario
-            window.location.hash = '#testimonios'; // redirigir a sección
+            // Recargar toda la página
+            window.location.reload();
           });
         })
         .catch((error) => {
@@ -868,7 +869,7 @@ db.collection("testimonios")
   </script>
 
   <!-- Firebase Firestore -->
-  
+
 
 
 </body>
