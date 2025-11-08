@@ -15,11 +15,11 @@ window.enTranslations = {
     "hero.subtitle": "Airport, hotel, falls transfers and personalized tours",
     "about.badge": "ABOUT ME",
     "about.mainTitle": "More than a transfer, a guided experience in Puerto Iguazú",
-     "about.description": "My name is <strong>Matías Bogado</strong>, and I am your <strong>professional companion</strong> during the " +
-              "trip. " +
-              "With years of experience in Puerto Iguazú and executive transfers between provinces, I know every corner of " +
-              "this wonderful region " +
-              "and I am passionate about sharing its stories, secrets and the best places while I take you to your destination.",
+    "about.description": "My name is <strong>Matías Bogado</strong>, and I am your <strong>professional companion</strong> during the " +
+        "trip. " +
+        "With years of experience in Puerto Iguazú and executive transfers between provinces, I know every corner of " +
+        "this wonderful region " +
+        "and I am passionate about sharing its stories, secrets and the best places while I take you to your destination.",
     "about.feature1.title": "Personalized Tour Guide",
     "about.feature1.text": "Discover the best places and hidden gems of Iguazú throughout the entire trip.",
     "about.feature2.title": "Authentic Local Experience",
@@ -46,7 +46,8 @@ window.enTranslations = {
     "cta.subtitle": "Reliable transfers to Iguazú Falls and main destinations.",
     "cta.button": "Book Now",
     "portfolio.title": "Popular Destinations",
-    "portfolio.subtitle": "Discover our most popular destinations",
+    "portfolio.subtitle": "These are just some of our most requested destinations. If you’d like to visit customized locations, we can also arrange personalized transfers for you."
+    ,
     "portfolio.filter.all": "All",
     "contact.form.agree": "I agree public my testimonial on the website.",
     "portfolio.filter.misiones": "Misiones",
@@ -90,10 +91,10 @@ window.enTranslations = {
     "portfolio.item18.text": "A beautiful lake ideal for fishing and water sports.",
     "portfolio.item19.title": "Monday Falls",
     "portfolio.item19.text": "Impressive waterfalls on the Paraguay Brazil border.",
-    "portfolio.item20.title": "Cataratas del iguazú, from Foz do Iguaçu",  
+    "portfolio.item20.title": "Cataratas del iguazú, from Foz do Iguaçu",
     "portfolio.item20.text": "Complete guide to visit the impressive falls.",
-        "portfolio.item21.title":"  Shopping Catuai",
-    "portfolio.item21.text":" It is one of the largest shopping centers in Paraná",
+    "portfolio.item21.title": "  Shopping Catuai",
+    "portfolio.item21.text": " It is one of the largest shopping centers in Paraná",
     "contact.title": "Testimonials",
     "contact.subtitle": "Share your experience. Your testimonial will be displayed publicly.",
     "contact.address.title": "Address",

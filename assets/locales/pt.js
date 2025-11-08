@@ -16,10 +16,10 @@ window.ptTranslations = {
     "about.badge": "SOBRE MIM",
     "about.mainTitle": "Mais do que um traslado, uma experiência guiada em Puerto Iguazú",
     "about.description": "Meu nome é <strong>Matías Bogado</strong>, e sou seu <strong>acompaniante profissional</strong> durante a " +
-              "viagem. " +
-              "Com anos de experiência em Puerto Iguazú e traslados executivos entre províncias, conheço cada canto de " +
-              "esta maravilhosa região " +
-              "e me apaixono por compartilhar suas histórias, segredos e os melhores lugares enquanto o levo ao seu destino.",
+        "viagem. " +
+        "Com anos de experiência em Puerto Iguazú e traslados executivos entre províncias, conheço cada canto de " +
+        "esta maravilhosa região " +
+        "e me apaixono por compartilhar suas histórias, segredos e os melhores lugares enquanto o levo ao seu destino.",
     "about.feature1.title": "Guia Turístico Personalizado",
     "about.feature1.text": "Conheça os melhores lugares e segredos de Iguazú durante todo o percurso.",
     "about.feature2.title": "Experiência Local Autêntica",
@@ -28,7 +28,7 @@ window.ptTranslations = {
     "about.cta.button": "Contactar pelo WhatsApp",
     "about.experience.years": "ANOS DE EXPERIÊNCIA",
     "services.title": "Serviços",
-     "contact.form.agree": "Eu autorizo que meu depoimento seja publicado no site.",
+    "contact.form.agree": "Eu autorizo que meu depoimento seja publicado no site.",
     "contact.loading": "Carregando depoimentos...",
     "services.subtitle": "Traslados profissionais adaptados às suas necessidades em Puerto Iguazú",
     "services.item1.title": "Traslados ao Aeroporto",
@@ -47,7 +47,8 @@ window.ptTranslations = {
     "cta.subtitle": "Traslados confiáveis para as Cataratas e principais destinos.",
     "cta.button": "Reservar Agora",
     "portfolio.title": "Destinos Populares",
-    "portfolio.subtitle": "Conheça nossos destinos mais populares",
+    "portfolio.subtitle": "Estes são apenas alguns dos nossos destinos mais procurados. Se desejar explorar locais personalizados, também podemos organizar traslados sob medida para você."
+    ,
     "portfolio.filter.all": "Todos",
     "portfolio.filter.misiones": "Misiones",
     "portfolio.filter.foz": "Foz do Iguaçu",
@@ -92,8 +93,8 @@ window.ptTranslations = {
     "portfolio.item19.text": "Quedas d’água impressionantes na fronteira Paraguai Brasil.",
     "portfolio.item20.title": "Cataratas del iguazú, desde Foz do Iguaçu",
     "portfolio.item20.text": "Guia completa para visitar as impressionantes cataratas.",
-        "portfolio.item21.title":"  Shopping Catuai",
-    "portfolio.item21.text":" É um dos maiores centros comerciais do Paraná",
+    "portfolio.item21.title": "  Shopping Catuai",
+    "portfolio.item21.text": " É um dos maiores centros comerciais do Paraná",
     "contact.title": "Depoimentos",
     "contact.subtitle": "Compartilhe sua experiência. Seu depoimento será exibido publicamente.",
     "contact.address.title": "Endereço",

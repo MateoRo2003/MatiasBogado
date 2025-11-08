@@ -16,17 +16,17 @@ window.esTranslations = {
     "about.badge": "SOBRE MÍ",
     "about.mainTitle": "Más que un traslado, una experiencia guiada en Puerto Iguazú",
     "about.description": "Mi nombre es <strong>Matías Bogado</strong>, y soy tu <strong>acompañante profesional</strong> durante el " +
-              "viaje. " +
-              "Con años de experiencia en Puerto Iguazú y traslados ejecutivos entre provincias, conozco cada rincón de " +
-              "esta maravillosa región " +
-              "y me apasiona compartir sus historias, secretos y los mejores lugares mientras te llevo a tu destino.",
+        "viaje. " +
+        "Con años de experiencia en Puerto Iguazú y traslados ejecutivos entre provincias, conozco cada rincón de " +
+        "esta maravillosa región " +
+        "y me apasiona compartir sus historias, secretos y los mejores lugares mientras te llevo a tu destino.",
     "about.feature1.title": "Guía Turística Personalizada",
     "about.feature1.text": "Conoce los mejores lugares y secretos de Iguazú durante todo el recorrido.",
     "about.feature2.title": "Experiencia Local Auténtica",
     "about.feature2.text": "Recomendaciones de restaurantes, miradores y actividades que solo un local conoce.",
     "about.cta.question": "¿Listo para vivir una experiencia única?",
     "about.cta.button": "Contactar por WhatsApp",
-     "contact.form.agree": "Acepto publicar mi testimonio en el sitio web.",
+    "contact.form.agree": "Acepto publicar mi testimonio en el sitio web.",
     "about.experience.years": "AÑOS DE EXPERIENCIA",
     "services.title": "Servicios",
     "contact.loading": "Cargando testimonios...",
@@ -47,7 +47,8 @@ window.esTranslations = {
     "cta.subtitle": "Traslados confiables hacia Cataratas y principales destinos.",
     "cta.button": "Reservar Ahora",
     "portfolio.title": "Destinos Populares",
-    "portfolio.subtitle": "Conoce nuestros destinos populares",
+    "portfolio.subtitle": "Estos son solo algunos de nuestros destinos más solicitados. Si querés explorar lugares personalizados, también podemos organizar traslados a medida para vos."
+    ,
     "portfolio.filter.all": "Todos",
     "portfolio.filter.misiones": "Misiones",
     "portfolio.filter.foz": "Foz do Iguaçu",
@@ -78,8 +79,8 @@ window.esTranslations = {
     "portfolio.item12.text": "Un espectáculo natural de saltos de agua en la selva misionera.",
     "portfolio.item13.title": "Parque Das Aves",
     "portfolio.item13.text": "Un refugio de aves exóticas en un entorno natural.",
-    "portfolio.item21.title":"  Shopping Catuai",
-    "portfolio.item21.text":" Es uno de los centros comerciales más grandes de Paraná",
+    "portfolio.item21.title": "  Shopping Catuai",
+    "portfolio.item21.text": " Es uno de los centros comerciales más grandes de Paraná",
     "portfolio.item20.text": "Guía completa para visitar las impresionantes cataratas.",
     "portfolio.item14.title": "Represa de Itaipú",
     "portfolio.item14.text": "Una de las mayores represas del mundo, ubicada en la frontera entre Paraguay y Brasil.",
@@ -116,5 +117,5 @@ window.esTranslations = {
     "footer.email": "Email",
     "footer.copyright": "© Copyright travelonlineagency · Todos los derechos reservados",
     "footer.credits": "Sitio diseñado por <a href=\"https://mateorojas.com.ar/\" target=\"_blank\" rel=\"noopener noreferrer\">Mateo Rojas</a>",
-    
+
 }
