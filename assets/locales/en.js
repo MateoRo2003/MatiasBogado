@@ -115,6 +115,6 @@ window.enTranslations = {
     "footer.instagram": "Instagram",
     "footer.email": "Email",
     "footer.copyright": "© Copyright travelonlineagency · All rights reserved",
-    "footer.credits": "Site designed by",
-    "footer.credits.author": "Mateo Rojas"
+    "footer.credits": "Website designed by <a href=\"https://mateorojas.com.ar/\" target=\"_blank\" rel=\"noopener noreferrer\">Mateo Rojas</a>",
+
 }
